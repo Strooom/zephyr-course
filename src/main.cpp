@@ -4,7 +4,7 @@
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 
-static constexpr uint32_t sleepTimeInMs{1000};
+static constexpr uint32_t sleepTimeInMs{CONFIG_SLEEP_TIME_IN_MS};
 static constexpr struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
 
 

@@ -1,0 +1,11 @@
+config SLEEP_TIME_IN_MS
+    int "Sleep time in ms - Controls LED toggle interval"
+    default 1000
+    range 100 3000
+    help
+        After toggling the LED, the application will sleep for this amount of milliseconds
+        With this parameter you can control the blink rate
+        Blink rate is 1 / (2 * SLEEP_TIME_IN_MS) in Hz
+
+
+source "Kconfig.zephyr"
