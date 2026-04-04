@@ -7,6 +7,7 @@ I've decided to set up 2 template repo's :
 I think there should be a separate repo for ```west workspace``` (1) and ```zephyr project``` (2) :
 * workspace repo will normally not change / project repo will change a lot
 * developer willing to work on (2) may have their own, different workspaces
+* note that having the top directory as .git repo is NOT supported / recommended by zephyr https://docs.zephyrproject.org/latest/develop/west/workspaces.html#not-supported-workspace-topdir-as-git-repository
 
 The Iomico repo is a template for a zephyr project (not zephyr workspace), so it's contents should be cloned under /app of the workspace. However, this repo already contains an app folder itself... confusing. So I decided to reorganize it, and move all app folders up one level.
 
