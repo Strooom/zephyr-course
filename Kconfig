@@ -1,3 +1,5 @@
+mainmenu "Learning Zephyr menuconfig"
+menu "Led Blink Options"
 config SLEEP_TIME_IN_MS
     int "Sleep time in ms - Controls LED toggle interval"
     default 1000
@@ -6,6 +8,6 @@ config SLEEP_TIME_IN_MS
         After toggling the LED, the application will sleep for this amount of milliseconds
         With this parameter you can control the blink rate
         Blink rate is 1 / (2 * SLEEP_TIME_IN_MS) in Hz
-
+endmenu
 
 source "Kconfig.zephyr"
