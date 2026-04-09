@@ -1,0 +1,40 @@
+mainmenu "Learning Zephyr menuconfig"
+menu "Led Blink Driver Options" # This creates a submenu for all settings related to the led blink driver
+
+# This prepares the options for a symbol further down
+choice
+    prompt "Led BLink Interval Options"
+    default BLINK_INTERVAL_OPTION_1000MS
+config BLINK_INTERVAL_OPTION_250MS
+    bool "Fast (250 ms)"
+config BLINK_INTERVAL_OPTION_1000MS
+    bool "Normal (1000 ms)"
+config BLINK_INTERVAL_OPTION_2500MS
+    bool "Slow (2500 ms)"
+endchoice
+
+config SLEEP_TIME_IN_MS
+    int 
+    default 250 if BLINK_INTERVAL_OPTION_250MS
+    default 1000 if BLINK_INTERVAL_OPTION_1000MS
+    default 2500 if BLINK_INTERVAL_OPTION_2500MS
+    default 1000
+
+menuconfig LED_ADVANCED_OPTIONS
+    bool "Enable advanced options for led blink driver"
+
+if LED_ADVANCED_OPTIONS
+config LED_BRIGHTNESS
+    int "Led Brightness (0 % .. 100 %)"
+    default 50
+
+config LED_SPEED
+    int "Led Speed (0.2 Hz .. 2 Hz)"
+    default 1
+endif
+
+
+
+endmenu
+
+source "Kconfig.zephyr"

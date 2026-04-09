@@ -1,4 +1,16 @@
-# Note to IOMICO reviewer
+# Note to IOMICO reviewer - Homework Lesson 3
+I made a variant of the homework : a Kconfig fragment for a 'breathing led' library.  
+When the library is enabled, you can 
+* choose the breathing speed, in a range.  
+* select which hw mechanism to choose :
+    * fading using PWM on normal LED
+    * fading using a WS2818 led
+* When you select the WS2818 led, an extra option appears where you can choose the color of the led from a list
+
+I will implement the library and related DTS for the Lesson 4 homework.
+
+
+# Note to IOMICO reviewer - Homework Lesson 2
 I read a lot about West Workspaces and how they could and should be used with Zephyr.  
 I've decided to set up 2 template repo's :
 1 a workspace repo - called the 'top dir' in zephyr docs.

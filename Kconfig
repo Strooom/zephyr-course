@@ -1,34 +1,20 @@
-mainmenu "Learning Zephyr menuconfig"
-menu "Led Blink Driver Options" # This creates a submenu for all settings related to the led blink driver
+rsource "lib/breathing_led/Kconfig"
+source "Kconfig.zephyr"
 
-config LED_BRIGHTNESS
-    int "Led Brightness (0 % .. 100 %)"
-    default 50
+menu "WS2812 Sample Configuration"
 
-config LED_SPEED
-    int "Led Speed (0.2 Hz .. 2 Hz)"
-    default 1
+config SAMPLE_LED_UPDATE_DELAY
+	int "Delay between LED updates in ms"
+	default 150
+	help
+	  Delay between LED updates in ms.
 
-# This prepares the options for a symbol further down
-choice
-    prompt "Led BLink Interval Options"
-    default BLINK_INTERVAL_OPTION_1000MS
-config BLINK_INTERVAL_OPTION_250MS
-    bool "Fast (250 ms)"
-config BLINK_INTERVAL_OPTION_1000MS
-    bool "Normal (1000 ms)"
-config BLINK_INTERVAL_OPTION_2500MS
-    bool "Slow (2500 ms)"
-endchoice
-
-
-config SLEEP_TIME_IN_MS
-    int 
-    default 250 if BLINK_INTERVAL_OPTION_250MS
-    default 1000 if BLINK_INTERVAL_OPTION_1000MS
-    default 2500 if BLINK_INTERVAL_OPTION_2500MS
-    default 1000
+config SAMPLE_LED_BRIGHTNESS
+	int "LED brightness"
+	default 32
+	range 1 255
+	help
+	  Brightness level of each LED. Defaults to a low value to make
+	  it easier to distinguish colors.
 
 endmenu
-
-source "Kconfig.zephyr"
