@@ -1,3 +1,12 @@
+# Note to IOMICO reviewer - Homework Lesson 4
+For this homework I decided to try a different board : the M5Stack AtomS3. Instead of blinking LEDs, I decided to try RGB ledStrips (WS2812 leds). In Zephyr there are a few different ways to drive them, I decided to try the SPI-driver first. This requires the app.overlay to contain the definitions on which pins to transmit the MOSI, and some timing parameters. Also the length of the led-strip (in number of leds/pixels) is set in the DTS overlay file. Some applicaction timing parameter is defined in Kconfig.  
+Changes :  
+* upgraded west.yml to zephyr 4.4 and adding espressif hal.
+* added an 'rgb' library to do calculations on rgb colors.
+* added app.overlay to include/enable the external hw. (SPI3 is used because SPI2 is used for the display and I may want to use both at the same time in a future project).
+* added Kconfig with parameters needed for the ledstrip driver.
+* some other libraries are under 'lib', they are for future use.
+
 # Note to IOMICO reviewer - Homework Lesson 3
 I made a variant of the homework : a Kconfig fragment for a 'breathing led' library.  
 When the library is enabled, you can 
