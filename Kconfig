@@ -1,20 +1,11 @@
 rsource "lib/breathing_led/Kconfig"
 source "Kconfig.zephyr"
 
-menu "WS2812 Sample Configuration"
+menu "WS2812 Strip Configuration"
 
 config SAMPLE_LED_UPDATE_DELAY
 	int "Delay between LED updates in ms"
-	default 150
+	default 50
 	help
 	  Delay between LED updates in ms.
-
-config SAMPLE_LED_BRIGHTNESS
-	int "LED brightness"
-	default 32
-	range 1 255
-	help
-	  Brightness level of each LED. Defaults to a low value to make
-	  it easier to distinguish colors.
-
 endmenu
