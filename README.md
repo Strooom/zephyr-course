@@ -1,3 +1,12 @@
+# Note to IOMICO reviewer - Homework Lesson 5.1
+I decided to try to port a custom board I designed some time ago to Zephyr. Seeed Studio offers a devkit with the same SoC/Module and so I could copy/paste/modify from their definition.
+This custom board is ultra-low-power (1.4 uA in sleep), so it does not have any leds. But I was able to bring the board up with a hello-world via uart2 (devkit uses uart1). Also this board has a BME680 sensor on I2C2, and I was able to activate the driver and do simple readings of temperature and humidity. 
+I still have a few todo's for the DTS for this board :
+* The board also has 128K of EEPROM on I2C2
+* The board has an e-paper display, connected to SPI2 work
+* Finally, this board should go to sleep when idle, which is one more thing I need to find out how to do that.
+
+
 # Note to IOMICO reviewer - Homework Lesson 4
 For this homework I decided to try a different board : the M5Stack AtomS3. Instead of blinking LEDs, I decided to try RGB ledStrips (WS2812 leds). In Zephyr there are a few different ways to drive them, I decided to try the SPI-driver first. This requires the app.overlay to contain the definitions on which pins to transmit the MOSI, and some timing parameters. Also the length of the led-strip (in number of leds/pixels) is set in the DTS overlay file. Some applicaction timing parameter is defined in Kconfig.  
 Changes :  
