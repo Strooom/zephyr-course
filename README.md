@@ -1,3 +1,17 @@
+# Note to IOMICO reviewer - Homework Lesson 5.2
+Tried to create a board definition from scratch, this time using another custom board I made as shown in boards/toolsquare/doc/image.png  
+I was able to make a hello_world application build, flash and work. There are still many areas for which I am unsure :
+* what about partition tables...
+* how to deal with two cores procpu / appcpu, eg. how to I make sure the wifi stack runs on its own cpu ?
+* there was a glitch in that my ESP32-WROOM SOC HW was Revision 1, and Zephyr requires V3. I could fix by CONFIG_ESP32_USE_UNSUPPORTED_REVISION=y (without this, the device does not boot)
+
+Now I can move forward and start to add more hardware to this board :
+* I2C - several devices on it (PN7150, MCP23008, etc..) some are supported by Zephyr, some are not :-(
+* SPI : there is a display, driver is supported by Zephyr, will also need LVGL, There is also a touchscreen controller on this SPI
+* I2S audio output
+
+About the board.c file printing a message at boot : sorry I was unable to complete this in time due to lack of time..
+
 # Note to IOMICO reviewer - Homework Lesson 5.1
 I decided to try to port a custom board I designed some time ago to Zephyr. Seeed Studio offers a devkit with the same SoC/Module and so I could copy/paste/modify from their definition.
 This custom board is ultra-low-power (1.4 uA in sleep), so it does not have any leds. But I was able to bring the board up with a hello-world via uart2 (devkit uses uart1). Also this board has a BME680 sensor on I2C2, and I was able to activate the driver and do simple readings of temperature and humidity. 
