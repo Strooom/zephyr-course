@@ -1,3 +1,8 @@
+# Note to IOMICO reviewer - Homework Lesson 6.2
+I made the delay for blinking the LED a parameter in the driver. I can be set from the dts in app.overlay  
+At the entry of main(), the active delay is read from the driver and printed to serial monitor.
+Small hickup : I added a l6driver.h file, but as I am using C++ (at least main.cpp) I needed to wrap it in "extern "C" {}" to prevent name mingling. Without it I got a linker error.. Makes sense.
+
 # Note to IOMICO reviewer - Homework Lesson 6.1
 I've written a new driver which implements 2 functions of the sensor API (sample_fetch and .channel_get).
 I decided to keep the driver in the app folder, as this is what's being pushed to the repo. If it would be in a separate module in the west workspace, it would not be pushed to git remote and inaccessible for review.

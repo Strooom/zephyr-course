@@ -2,6 +2,7 @@
     l6driver0: l6driver {
         compatible = "strooom,l6driver";
         calibration = <50>;
+        sleep-ms = <200>;
         gpios = <&gpiob 5 GPIO_ACTIVE_LOW>;
         status = "okay";
     };
