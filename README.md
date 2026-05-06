@@ -1,3 +1,8 @@
+# Note to IOMICO reviewer - Homework Lesson 6.1
+I've written a new driver which implements 2 functions of the sensor API (sample_fetch and .channel_get).
+I decided to keep the driver in the app folder, as this is what's being pushed to the repo. If it would be in a separate module in the west workspace, it would not be pushed to git remote and inaccessible for review.
+The board used is the lora_e5_dev_board/stm32wle5xx as this has a LED, and I can easily flash it and use the serial monitor on it.
+
 # Note to IOMICO reviewer - Homework Lesson 5.2
 Tried to create a board definition from scratch, this time using another custom board I made as shown in boards/toolsquare/doc/image.png  
 I was able to make a hello_world application build, flash and work. There are still many areas for which I am unsure :
