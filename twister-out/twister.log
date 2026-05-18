@@ -1,0 +1,98 @@
+2026-05-18 15:02:01,085 - twister - INFO - Using Ninja..
+2026-05-18 15:02:01,142 - twister - INFO - Zephyr version: v4.4.0
+2026-05-18 15:02:01,144 - twister - DEBUG - Running cmake script /home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/cmake/verify-toolchain.cmake
+2026-05-18 15:02:01,144 - twister - DEBUG - Calling cmake: /usr/bin/cmake -DFORMAT=json -P /home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/cmake/verify-toolchain.cmake
+2026-05-18 15:02:03,547 - twister - DEBUG - Finished running /home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/cmake/verify-toolchain.cmake
+2026-05-18 15:02:03,547 - twister - INFO - Using 'zephyr/gnu' toolchain variant.
+2026-05-18 15:02:04,386 - twister - DEBUG - Reading testsuite configuration files under /home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer...
+2026-05-18 15:02:04,386 - twister - DEBUG - Found possible testsuite in /home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer
+2026-05-18 15:02:04,388 - twister - DEBUG - No duplicates found.
+2026-05-18 15:02:04,389 - twister - DEBUG -  platform filter: ['native_sim']
+2026-05-18 15:02:04,389 - twister - DEBUG - platform_pattern: []
+2026-05-18 15:02:04,389 - twister - DEBUG -    vendor filter: []
+2026-05-18 15:02:04,389 - twister - DEBUG -      arch_filter: None
+2026-05-18 15:02:04,389 - twister - DEBUG -       tag_filter: None
+2026-05-18 15:02:04,389 - twister - DEBUG -      exclude_tag: None
+2026-05-18 15:02:04,389 - twister - DEBUG - Checking platform filter: ['native_sim']
+2026-05-18 15:02:04,389 - twister - INFO - Building initial testsuite list...
+2026-05-18 15:02:04,391 - twister - INFO - Built testsuite list in 0.00 seconds
+2026-05-18 15:02:04,391 - twister - INFO - Writing JSON report /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/testplan.json
+2026-05-18 15:02:04,408 - twister - INFO - JOBS: 20
+2026-05-18 15:02:04,409 - twister - INFO - Adding tasks to the queue...
+2026-05-18 15:02:04,409 - twister - DEBUG - adding native_sim/native/host/gnu/lib.circularbuffer
+2026-05-18 15:02:04,411 - twister - INFO - Added initial list of jobs to queue
+2026-05-18 15:02:04,422 - twister - DEBUG - Running cmake on /home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer for native_sim/native
+2026-05-18 15:02:04,422 - twister - DEBUG - Calling cmake: /usr/bin/cmake -B/home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer -DTC_RUNID=54a02c6301976655f417a88ca8f6d5a2 -DTC_NAME=lib.circularbuffer -DCONFIG_COMPILER_WARNINGS_AS_ERRORS=y -DEXTRA_GEN_EDT_ARGS=--edtlib-Werror -GNinja -DPython3_EXECUTABLE=/home/strooom/projects/zephyr/venv/bin/python3 -DZEPHYR_TOOLCHAIN_VARIANT=host/gnu -S/home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer -DOVERLAY_CONFIG=/home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer/twister/testsuite_extra.conf -DBOARD=native_sim/native
+2026-05-18 15:02:04,435 - twister - DEBUG - Launched 20 jobs
+2026-05-18 15:02:12,982 - twister - DEBUG - Finished running cmake /home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer for native_sim/native in 8.56 seconds
+2026-05-18 15:02:12,985 - twister - DEBUG - build test: native_sim/native/host/gnu/lib.circularbuffer
+2026-05-18 15:02:12,985 - twister - DEBUG - Building /home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer for native_sim/native
+2026-05-18 15:02:12,986 - twister - DEBUG - Running /usr/bin/cmake --build /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer
+2026-05-18 15:02:14,908 - twister - DEBUG - Finished building /home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer for native_sim/native in 1.92 seconds
+2026-05-18 15:02:14,908 - twister - DEBUG - Determine test cases for test instance: native_sim/native/host/gnu/lib.circularbuffer
+2026-05-18 15:02:14,908 - twister - DEBUG - Determine test cases for test suite: lib.circularbuffer
+2026-05-18 15:02:15,080 - twister - DEBUG - Test instance native_sim/native/host/gnu/lib.circularbuffer already has 5 testcase(s) known: [<TestCase lib.circularbuffer.circularbuffer.push_pop with None>, <TestCase lib.circularbuffer.circularbuffer.push_pop_wrap with None>, <TestCase lib.circularbuffer.circularbuffer.push_overflow with None>, <TestCase lib.circularbuffer.circularbuffer.pop_underflow with None>, <TestCase lib.circularbuffer.circularbuffer.initialize with None>]
+2026-05-18 15:02:15,080 - twister - DEBUG - Detected 5 Ztest case(s): [lib.circularbuffer.circularbuffer.initialize, lib.circularbuffer.circularbuffer.push_pop, lib.circularbuffer.circularbuffer.push_pop_wrap, lib.circularbuffer.circularbuffer.push_overflow, lib.circularbuffer.circularbuffer.pop_underflow] in /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer/zephyr/zephyr.elf
+2026-05-18 15:02:15,083 - twister - DEBUG - run test: native_sim/native/host/gnu/lib.circularbuffer
+2026-05-18 15:02:15,083 - twister - DEBUG - Reset instance status from 'passed' to None before run.
+2026-05-18 15:02:15,083 - twister - DEBUG - Spawning process: /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer/zephyr/zephyr.exe
+in directory: /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer
+2026-05-18 15:02:15,084 - twister - DEBUG - Spawning BinaryHandler Thread for native_sim/native/host/gnu/lib.circularbuffer
+2026-05-18 15:02:15,085 - twister - DEBUG - OUTPUT: *** Booting Zephyr OS build v4.4.0 ***
+2026-05-18 15:02:15,085 - twister - DEBUG - OUTPUT: Running TESTSUITE circularbuffer
+2026-05-18 15:02:15,086 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-18 15:02:15,086 - twister - DEBUG - OUTPUT: START - test_initialize
+2026-05-18 15:02:15,086 - twister - DEBUG - OUTPUT:  PASS - test_initialize in 0.000 seconds
+2026-05-18 15:02:15,087 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-18 15:02:15,087 - twister - DEBUG - OUTPUT: START - test_pop_underflow
+2026-05-18 15:02:15,087 - twister - DEBUG - OUTPUT:  PASS - test_pop_underflow in 0.000 seconds
+2026-05-18 15:02:15,087 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-18 15:02:15,088 - twister - DEBUG - OUTPUT: START - test_push_overflow
+2026-05-18 15:02:15,088 - twister - DEBUG - OUTPUT:  PASS - test_push_overflow in 0.000 seconds
+2026-05-18 15:02:15,088 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-18 15:02:15,088 - twister - DEBUG - OUTPUT: START - test_push_pop
+2026-05-18 15:02:15,089 - twister - DEBUG - OUTPUT:  PASS - test_push_pop in 0.000 seconds
+2026-05-18 15:02:15,089 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-18 15:02:15,089 - twister - DEBUG - OUTPUT: START - test_push_pop_wrap
+2026-05-18 15:02:15,090 - twister - DEBUG - OUTPUT:  PASS - test_push_pop_wrap in 0.000 seconds
+2026-05-18 15:02:15,090 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-18 15:02:15,090 - twister - DEBUG - OUTPUT: TESTSUITE circularbuffer succeeded
+2026-05-18 15:02:15,090 - twister - DEBUG - OUTPUT: 
+2026-05-18 15:02:15,091 - twister - DEBUG - OUTPUT: ------ TESTSUITE SUMMARY START ------
+2026-05-18 15:02:15,091 - twister - DEBUG - OUTPUT: 
+2026-05-18 15:02:15,091 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [circularbuffer]: pass = 5, fail = 0, skip = 0, total = 5 duration = 0.000 seconds
+2026-05-18 15:02:15,091 - twister - DEBUG - OUTPUT:  - PASS - [circularbuffer.test_initialize] duration = 0.000 seconds
+2026-05-18 15:02:15,092 - twister - DEBUG - OUTPUT:  - PASS - [circularbuffer.test_pop_underflow] duration = 0.000 seconds
+2026-05-18 15:02:15,092 - twister - DEBUG - OUTPUT:  - PASS - [circularbuffer.test_push_overflow] duration = 0.000 seconds
+2026-05-18 15:02:15,092 - twister - DEBUG - OUTPUT:  - PASS - [circularbuffer.test_push_pop] duration = 0.000 seconds
+2026-05-18 15:02:15,093 - twister - DEBUG - OUTPUT:  - PASS - [circularbuffer.test_push_pop_wrap] duration = 0.000 seconds
+2026-05-18 15:02:15,093 - twister - DEBUG - OUTPUT: 
+2026-05-18 15:02:15,093 - twister - DEBUG - OUTPUT: ------ TESTSUITE SUMMARY END ------
+2026-05-18 15:02:15,093 - twister - DEBUG - OUTPUT: 
+2026-05-18 15:02:15,094 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-18 15:02:15,094 - twister - DEBUG - OUTPUT: RunID: 54a02c6301976655f417a88ca8f6d5a2
+2026-05-18 15:02:15,094 - twister - DEBUG - OUTPUT: PROJECT EXECUTION SUCCESSFUL
+2026-05-18 15:02:15,096 - twister - DEBUG - run status: native_sim/native/host/gnu/lib.circularbuffer passed
+2026-05-18 15:02:15,098 - twister - DEBUG - Run coverage for 'native_sim/native/host/gnu/lib.circularbuffer'
+2026-05-18 15:02:15,184 - twister - DEBUG - Select gcovr as the coverage tool...
+2026-05-18 15:02:15,184 - twister - DEBUG - Using gcov tool: gcov
+2026-05-18 15:02:15,214 - twister - DEBUG - Working on /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer/handler.log
+2026-05-18 15:02:15,214 - twister - DEBUG - Generating 0 gcda files
+2026-05-18 15:02:15,214 - twister - DEBUG - Gcov data captured: /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer/handler.log
+2026-05-18 15:02:15,224 - twister - INFO - 1 test scenarios (1 configurations) selected, 0 configurations filtered (0 by static filter, 0 at runtime).
+2026-05-18 15:02:15,232 - twister - INFO - [32m1 of 1[39m executed test configurations passed (100.00%), 0 built (not run), 0 failed, 0 errored, with no warnings in 14.15 seconds.
+2026-05-18 15:02:15,233 - twister - INFO - 5 of 5 executed test cases passed (100.00%) on 1 out of total 1473 platforms (0.07%).
+2026-05-18 15:02:15,233 - twister - INFO - [32m1[39m test configurations executed on platforms, [36m0[39m test configurations were only built.
+2026-05-18 15:02:15,325 - twister - DEBUG - Select gcovr as the coverage tool...
+2026-05-18 15:02:15,325 - twister - DEBUG - Using gcov tool: gcov
+2026-05-18 15:02:15,325 - twister - DEBUG - Running: gcovr -r /home/strooom/projects/zephyr/iomicoZephyrCourse/app/lib/circularbuffer --gcov-ignore-parse-errors=negative_hits.warn_once_per_file --gcov-executable gcov -e tests/* --gcov-object-directory /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out --gcov-ignore-parse-errors=suspicious_hits.warn_once_per_file -e .*generated.* -e .*/tests/.* -e .*/samples/.* --exclude-branches-by-pattern (^\s*LOG_(?:HEXDUMP_)?(?:DBG|INF|WRN|ERR)\(.*)|(^\s*__ASSERT(?:_EVAL|_NO_MSG|_POST_ACTION)?\(.*) -v --merge-mode-functions=separate --json -o /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/coverage.json /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out
+2026-05-18 15:02:16,060 - twister - DEBUG - Running: gcovr -r /home/strooom/projects/zephyr/iomicoZephyrCourse/app/lib/circularbuffer -v --merge-mode-functions=separate --gcov-executable gcov -f tests/ztest -e tests/ztest/test/* --json -o /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/ztest.json /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out --gcov-object-directory /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out
+2026-05-18 15:02:16,809 - twister - DEBUG - Coverage collected 2 reports from: /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out
+2026-05-18 15:02:16,810 - twister - DEBUG - Running: gcovr -r /home/strooom/projects/zephyr/iomicoZephyrCourse/app/lib/circularbuffer -v --merge-mode-functions=separate --html /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/coverage/index.html --html-details --add-tracefile /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/coverage.json --add-tracefile /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/ztest.json --json-summary-pretty --json-summary /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/coverage_summary.json
+2026-05-18 15:02:17,081 - twister - INFO - HTML report generated: /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/coverage/index.html
+2026-05-18 15:02:17,081 - twister - DEBUG - All coverage data processed: True
+2026-05-18 15:02:17,081 - twister - INFO - Saving reports...
+2026-05-18 15:02:17,081 - twister - INFO - Writing JSON report /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/twister.json
+2026-05-18 15:02:17,081 - twister - INFO - Writing xunit report /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/twister.xml...
+2026-05-18 15:02:17,082 - twister - INFO - Writing xunit report /home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/twister_report.xml...
+2026-05-18 15:02:17,083 - twister - INFO - Run completed

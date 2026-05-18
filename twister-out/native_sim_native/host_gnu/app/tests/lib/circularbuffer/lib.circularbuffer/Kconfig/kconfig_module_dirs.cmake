@@ -1,0 +1,5 @@
+set(kconfig_env_dirs)
+list(APPEND kconfig_env_dirs ZEPHYR_CMSIS_6_MODULE_DIR=/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/hal/cmsis_6)
+list(APPEND kconfig_env_dirs ZEPHYR_HAL_ESPRESSIF_MODULE_DIR=/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/hal/espressif)
+list(APPEND kconfig_env_dirs ZEPHYR_HAL_STM32_MODULE_DIR=/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/hal/stm32)
+list(APPEND kconfig_env_dirs ZEPHYR_SEGGER_MODULE_DIR=/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/debug/segger)

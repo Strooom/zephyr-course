@@ -1,0 +1,4 @@
+"cmsis_6":"/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/hal/cmsis_6":"${ZEPHYR_CMSIS_6_CMAKE_DIR}"
+"hal_espressif":"/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/hal/espressif":"${ZEPHYR_HAL_ESPRESSIF_CMAKE_DIR}"
+"hal_stm32":"/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/hal/stm32":"/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/hal/stm32"
+"segger":"/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/debug/segger":"${ZEPHYR_SEGGER_CMAKE_DIR}"

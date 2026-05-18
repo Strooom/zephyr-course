@@ -1,3 +1,12 @@
+# Note to IOMICO reviewer - Homework Lesson 8.1 and 8.2
+I applied the unit testing onto a circularbuffer (template) class of my own. (app/lib/circularbuffer/circularbuffer.hpp).  
+I already had unit tests for this class, so I ported them to ZTEST.
+I always use coverage to detect edge cases, so I combined both homeworks into one.
+As each test creates a new circularBuffer instance on the stack, there is no need for shuffling the tests.
+
+![screenshot](coverage_screenshot.png)
+
+
 # Note to IOMICO reviewer - Homework Lesson 7.2
 I have added some shell commands to read out the BME680 sensor on my custom board : 
 ```

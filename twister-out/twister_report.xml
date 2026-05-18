@@ -1,0 +1,12 @@
+<testsuites>
+	<testsuite name="native_sim/native" timestamp="2026-05-18T15:02:04.391105" time="0.01" tests="5" failures="0" errors="0" skipped="0">
+		<properties>
+			<property name="version" value="v4.4.0" />
+		</properties>
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.initialize" time="0.00" />
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.push_pop" time="0.00" />
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.push_pop_wrap" time="0.00" />
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.push_overflow" time="0.00" />
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.pop_underflow" time="0.00" />
+	</testsuite>
+</testsuites>

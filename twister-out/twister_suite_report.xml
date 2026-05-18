@@ -1,0 +1,14 @@
+<testsuites>
+	<testsuite name="lib.circularbuffer" time="0.01" timestamp="2026-05-18T15:02:04.391105" tests="5" failures="0" errors="0" skipped="0">
+		<properties>
+			<property name="version" value="v4.4.0" />
+			<property name="platform" value="native_sim/native" />
+			<property name="architecture" value="posix" />
+		</properties>
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.initialize" time="0.00" />
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.push_pop" time="0.00" />
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.push_pop_wrap" time="0.00" />
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.push_overflow" time="0.00" />
+		<testcase classname="lib.circularbuffer" name="lib.circularbuffer.circularbuffer.pop_underflow" time="0.00" />
+	</testsuite>
+</testsuites>

@@ -1,0 +1,48 @@
+cmake:
+  application:
+    configuration-dir: '/home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer'
+    source-dir: '/home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer'
+  board:
+    name: 'native_sim'
+    path:
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/boards/native/native_sim'
+    qualifiers: 'native'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/bindings'
+    files:
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/boards/native/native_sim/native_sim.dts'
+    include-dirs:
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/modules/hal/stm32/dts'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/include'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/include/zephyr'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/common'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/vendor'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/rx'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/x86'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/xtensa'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/sparc'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/riscv'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/posix'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/arm64'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/arm'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts/arc'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/dts'
+  kconfig:
+    extra-user-files:
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer/twister/testsuite_extra.conf'
+    files:
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr/boards/native/native_sim/native_sim_defconfig'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer/prj.conf'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer/twister/testsuite_extra.conf'
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/app/twister-out/native_sim_native/host_gnu/app/tests/lib/circularbuffer/lib.circularbuffer/zephyr/misc/generated/extra_kconfig_options.conf'
+    user-files:
+     - '/home/strooom/projects/zephyr/iomicoZephyrCourse/app/tests/lib/circularbuffer/prj.conf'
+  toolchain:
+    name: 'host'
+    path: ''
+  zephyr:
+    version: '4.4.0'
+    zephyr-base: '/home/strooom/projects/zephyr/iomicoZephyrCourse/zephyr'
+version: '0.1.0'

@@ -1,0 +1,34 @@
+*** Booting Zephyr OS build v4.4.0 ***
+Running TESTSUITE circularbuffer
+===================================================================
+START - test_initialize
+ PASS - test_initialize in 0.000 seconds
+===================================================================
+START - test_pop_underflow
+ PASS - test_pop_underflow in 0.000 seconds
+===================================================================
+START - test_push_overflow
+ PASS - test_push_overflow in 0.000 seconds
+===================================================================
+START - test_push_pop
+ PASS - test_push_pop in 0.000 seconds
+===================================================================
+START - test_push_pop_wrap
+ PASS - test_push_pop_wrap in 0.000 seconds
+===================================================================
+TESTSUITE circularbuffer succeeded
+
+------ TESTSUITE SUMMARY START ------
+
+SUITE PASS - 100.00% [circularbuffer]: pass = 5, fail = 0, skip = 0, total = 5 duration = 0.000 seconds
+ - PASS - [circularbuffer.test_initialize] duration = 0.000 seconds
+ - PASS - [circularbuffer.test_pop_underflow] duration = 0.000 seconds
+ - PASS - [circularbuffer.test_push_overflow] duration = 0.000 seconds
+ - PASS - [circularbuffer.test_push_pop] duration = 0.000 seconds
+ - PASS - [circularbuffer.test_push_pop_wrap] duration = 0.000 seconds
+
+------ TESTSUITE SUMMARY END ------
+
+===================================================================
+RunID: 54a02c6301976655f417a88ca8f6d5a2
+PROJECT EXECUTION SUCCESSFUL
