@@ -1,3 +1,29 @@
+# Note to IOMICO reviewer - Homework Lesson 7.2
+I have added some shell commands to read out the BME680 sensor on my custom board : 
+```
+msense : show help
+msense temp [C|F] : show temperature, in Celsius or Farenheit
+msense hum : show humidity
+```
+
+I added some command handlers directly into main.cpp.  They handle 3 commands, check the parameters and call the sensor API to get the data.  
+After enabling the sensor shell in prj.conf, I was able to verify the readings from both shell interfaces : 
+
+```
+sensor get bme680
+channel type=13(ambient_temp) index=0 shift=16 num_samples=1 value=5534930645ns (21.269989)
+channel type=14(press) index=0 shift=16 num_samples=1 value=5534930645ns (101.364990)
+channel type=16(humidity) index=0 shift=16 num_samples=1 value=5534930645ns (48.254974)
+channel type=40(gas_resistance) index=0 shift=16 num_samples=1 value=5534930645ns (1155.457855)
+
+
+msense temp C
+Temperature: 21.28 C
+
+msense hum
+Humidity: 48.18 %
+```
+
 # Note to IOMICO reviewer - Homework Lesson 7.1
 For the homework on Zephyr Shell, I decided to try the EEPROM_SHELL, as my mumo_v2 custom board which has two BR24G512 chips on the I2C bus.  
 So first step was to add the eeprom to the board.dts file. It turns out that even if it are 2 separate chips, Zephyr's driver can handle it as a single 128K memory range (good, because that's also how I did it in bare metal driver).  
