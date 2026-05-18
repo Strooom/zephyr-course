@@ -39,7 +39,7 @@ SYNC.md
 # #############################
 # ### Test output           ###
 # #############################
-# /twister-out*
+/twister-out/native_sim_native/**/zephyr/*
 
 # #############################
 # ### Python                ###
