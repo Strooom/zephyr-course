@@ -1,3 +1,25 @@
+# Note to IOMICO reviewer - Homework Lesson 7.1
+For the homework on Zephyr Shell, I decided to try the EEPROM_SHELL, as my mumo_v2 custom board which has two BR24G512 chips on the I2C bus.  
+So first step was to add the eeprom to the board.dts file. It turns out that even if it are 2 separate chips, Zephyr's driver can handle it as a single 128K memory range (good, because that's also how I did it in bare metal driver).  
+Then I needed to add a few configs to enable the EEPROM shell in prj.conf  
+After building and flashing, I was able to get the eeprom size, fill some part of it and read it back. Nice!
+
+```
+eeprom fill eeprom 0x20 16 0xEE
+Writing 16 bytes of 0xee to EEPROM...
+Verifying...
+Verify OK
+```
+
+```
+eeprom read eeprom 0x0 64
+Reading 64 bytes from EEPROM, offset 0...
+00000000: 01 ff ff ff 02 ff ff ff  ff ff ff ff ff ff ff ff |........ ........|
+00000010: ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff |........ ........|
+00000020: ee ee ee ee ee ee ee ee  ee ee ee ee ee ee ee ee |........ ........|
+00000030: ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff |........ ........|
+```
+
 # Note to IOMICO reviewer - Homework Lesson 6.2
 I made the delay for blinking the LED a parameter in the driver. I can be set from the dts in app.overlay  
 At the entry of main(), the active delay is read from the driver and printed to serial monitor.
