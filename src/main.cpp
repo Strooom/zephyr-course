@@ -3,11 +3,6 @@
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
 
-// shell commands 'msense'
-// msense : shows help
-// msense temp (optional C or F)
-// msense hum
-
 static int cmd_msense_temp(const struct shell *shell, size_t argc, char **argv) {
     const struct device *bme680 = DEVICE_DT_GET_ONE(bosch_bme680);
     struct sensor_value temperature;
@@ -36,6 +31,7 @@ static int cmd_msense_temp(const struct shell *shell, size_t argc, char **argv) 
         shell_print(shell, "Too many arguments. Use 'msense temp [C|F]'.");
         return -1;
     }
+    return 0;
 }
 
     static int cmd_msense_hum(const struct shell *shell, size_t argc, char **argv) {

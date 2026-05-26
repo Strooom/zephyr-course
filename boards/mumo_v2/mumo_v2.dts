@@ -39,6 +39,8 @@
 		lora0 = &lora;
 		watchdog0 = &iwdg;
 		eeprom0 = &eeprom;
+		light0 = &tsl2591;
+		display0 = &epd;
 	};
 };
 
@@ -102,6 +104,28 @@ stm32_lp_tick_source: &lptim1 {
 		address-width = <16>;
 		timeout = <4>;
 		wp-gpios = <&gpiob 9 GPIO_ACTIVE_HIGH>;
+	};
+
+	tsl2591: tsl2591@29 {
+		status = "okay";
+		compatible = "ams,tsl2591";
+		reg = <0x29>;
+	};
+};
+
+&spi2 {
+	status = "okay";
+	pinctrl-0 = <&spi2_sck_pb13 &spi2_mosi_pa10>;
+	pinctrl-names = "default";
+	cs-gpios = <&gpiob 5 GPIO_ACTIVE_LOW>;
+
+	epd: epd@0 {
+		compatible = "custom,epaper";
+		reg = <0>;
+		spi-max-frequency = <4000000>;
+		reset-gpios = <&gpioa 0 GPIO_ACTIVE_LOW>;
+		dc-gpios = <&gpiob 14 GPIO_ACTIVE_HIGH>;
+		busy-gpios = <&gpiob 10 GPIO_ACTIVE_HIGH>;
 	};
 };
 
