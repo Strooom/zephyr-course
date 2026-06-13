@@ -10,6 +10,7 @@ manifest:
       import:
         name-allowlist:
           - cmsis_6
+          - hal_nxp
           - hal_stm32
           - hal_espressif
           - segger
