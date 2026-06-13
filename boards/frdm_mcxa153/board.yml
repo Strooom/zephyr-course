@@ -1,0 +1,6 @@
+board:
+  name: my_frdm_mcxa153
+  full_name: FRDM-MCXA153 TRAINING
+  vendor: nxp
+  socs:
+  - name: mcxa153
